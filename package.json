@@ -1,0 +1,19 @@
+{
+  "name": "todo-js",
+  "version": "1.0.0",
+  "description": "todo app on JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlehBarushka/todo-JS.git"
+  },
+  "author": "Aleh Barushka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlehBarushka/todo-JS/issues"
+  },
+  "homepage": "https://github.com/AlehBarushka/todo-JS#readme"
+}
