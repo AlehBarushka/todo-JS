@@ -5,38 +5,38 @@ const USER_LS = 'currentUsername';
 const SHOWING_CN = 'showing';
 
 function saveUsername(text) {
-    localStorage.setItem(USER_LS, text);
+  localStorage.setItem(USER_LS, text);
 }
 
 function showGreeting(text) {
-    greetings.innerText = `Привет, ${text}`;
-    greetings.classList.add(SHOWING_CN);
-    form.classList.remove(SHOWING_CN);
+  greetings.innerText = `Привет, ${text}`;
+  greetings.classList.add(SHOWING_CN);
+  form.classList.remove(SHOWING_CN);
 }
 
 function submitHandler(event) {
-    event.preventDefault();
-    const inputValue = input.value;
-    showGreeting(inputValue);
-    saveUsername(inputValue);
+  event.preventDefault();
+  const inputValue = input.value;
+  showGreeting(inputValue);
+  saveUsername(inputValue);
 }
 
 function askForUsername() {
-    form.classList.add(SHOWING_CN);
-    form.addEventListener('submit', submitHandler)
+  form.classList.add(SHOWING_CN);
+  form.addEventListener('submit', submitHandler);
 }
 
 function loadUsername() {
-    const currentUsername = localStorage.getItem(USER_LS);
-    if (currentUsername === null) {
-        askForUsername();
-    } else {
-        showGreeting(currentUsername);
-    }
+  const currentUsername = localStorage.getItem(USER_LS);
+  if (currentUsername === null) {
+    askForUsername();
+  } else {
+    showGreeting(currentUsername);
+  }
 }
 
 function init() {
-    loadUsername();
+  loadUsername();
 }
 
 init();
