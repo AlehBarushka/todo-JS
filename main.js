@@ -1,8 +1,8 @@
-import { initBg } from './modules/bg.js';
-import { initTime } from './modules/clock.js';
-import { initGreeting } from './modules/greeting.js';
-import { initToDoApp } from './modules/todo-app.js';
-import { initWeather } from './modules/weather.js';
+// import { initBg } from './modules/bg.js';
+// import { initTime } from './modules/clock.js';
+// import { initGreeting } from './modules/greeting.js';
+// import { initToDoApp } from './modules/todo-app.js';
+// import { initWeather } from './modules/weather.js';
 
 function main() {
 //   initTime();
@@ -12,4 +12,4 @@ function main() {
 //   initToDoApp();
   console.log('downloaded');
 }
-export { main };
+// export { main };
