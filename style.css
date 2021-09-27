@@ -52,3 +52,8 @@ h1 {
   font-family: Verdana, Arial, Sans-serif;
   color: rgb(221, 243, 220);
 }
+
+.weather {
+  color: black;
+  font-size: 60px;
+}
