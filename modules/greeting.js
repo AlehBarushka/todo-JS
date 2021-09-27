@@ -1,4 +1,4 @@
-const form = document.querySelector('#form');
+const form = document.querySelector('#greeting-form');
 const input = form.querySelector('input');
 const greetings = document.querySelector('#greetings');
 const USER_LS = 'currentUsername';
@@ -9,7 +9,7 @@ function saveUsername(text) {
 }
 
 function showGreeting(text) {
-  greetings.innerText = `Привет, ${text}`;
+  greetings.innerText = `Hello, ${text}!`;
   greetings.classList.add(SHOWING_CN);
   form.classList.remove(SHOWING_CN);
 }

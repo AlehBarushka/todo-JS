@@ -6,23 +6,8 @@ body {
   cursor: pointer;
 }
 
-h1 {
-  color: white;
-  transition: 0.5s ease-in-out;
-  text-align: center;
-}
-
 .clicked {
   color: #7f8c8d;
-}
-
-.form,
-.greetings {
-  display: none;
-}
-
-.showing {
-  display: block;
 }
 
 @keyframes fadein {
@@ -41,7 +26,7 @@ h1 {
   top: 0;
   left: 0;
   z-index: -1;
-  animation: fadein 1s linear;
+  animation: fadein 0.5s linear;
 }
 
 .clock {
@@ -54,6 +39,33 @@ h1 {
 }
 
 .weather {
+  font-family: Verdana, Arial, Sans-serif;
   color: black;
-  font-size: 60px;
+  font-size: 20px;
 }
+
+/* greeting */
+.greeting-form,
+.greetings {
+  display: none;
+}
+
+.greeting-form input {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: Verdana, Arial, Sans-serif;
+  color: rgb(255, 251, 251);
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.showing {
+  display: block;
+}
+
+/* greeting */
