@@ -5,10 +5,10 @@ import { initToDoApp } from './modules/todo-app.js';
 import { initWeather } from './modules/weather.js';
 
 function main() {
-  initTime();
-  initGreeting();
-  initBg();
-  initWeather();
-  initToDoApp();
+    initTime();
+    initGreeting();
+    initBg();
+    initWeather();
+    initToDoApp();
 }
 export { main };
