@@ -5,25 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>_TODOSOMETHINGUSEFUL_</title>
+    <title>_TO_DO_</title>
   </head>
   <body>
-    <div class="js-clock">
-      <h1></h1>
-    </div>
-    <form class="js-form form">
+    <div class="clock" id="clock"></div>
+    <form class="form" id="form">
       <input type="text" placeholder="What is your name?" />
     </form>
-    <h2 class="js-greetings greetings"></h2>
-    <form class="js-toDoForm">
+    <h2 class="greetings" id="greetings"></h2>
+    <form class="toDoForm" id="toDoForm">
       <input type="text" placeholder="add a task" />
     </form>
-    <ul class="js-toDoList"></ul>
-    <span class="js-weather"></span>
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
-    <script src="bg.js"></script>
-    <script src="weather.js"></script>
+    <ul class="toDoList" id="toDoList"></ul>
+    <div class="weather" id="weather"></div>
+    <script type="module">
+      import { main } from '/main.js';
+      main();
+    </script>
   </body>
 </html>

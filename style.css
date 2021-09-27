@@ -1,5 +1,5 @@
 body {
-  background-color: #ecf0f1;
+  background-color: #81a9b3;
 }
 
 .btn {
@@ -42,4 +42,13 @@ h1 {
   left: 0;
   z-index: -1;
   animation: fadein 1s linear;
+}
+
+.clock {
+  position: absolute;
+  margin: 0;
+  right: 10px;
+  font-size: 40px;
+  font-family: Verdana, Arial, Sans-serif;
+  color: rgb(221, 243, 220);
 }
