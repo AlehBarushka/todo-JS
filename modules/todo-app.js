@@ -35,7 +35,7 @@ function showToDos(text) {
   const delBtn = document.createElement('button');
   const span = document.createElement('span');
   const newId = toDos.length + 1;
-  delBtn.innerHTML = '❌';
+  delBtn.innerHTML = '✖';
   delBtn.addEventListener('click', deletToDo);
   span.innerText = text;
   li.appendChild(delBtn);

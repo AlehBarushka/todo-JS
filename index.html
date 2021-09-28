@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>_TO_DO_</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>TODO's</title>
   </head>
   <body>
     <div class="clock" id="clock"></div>
+    <div class="weather" id="weather"></div>
+    <h1 class="greetings" id="greetings"></h1>
     <form class="greeting-form" id="greeting-form">
       <input type="text" placeholder="What is your name?" />
     </form>
-    <h1 class="greetings" id="greetings"></h1>
     <form class="toDoForm" id="toDoForm">
       <input type="text" placeholder="Add a task" />
     </form>
-    <ul class="toDoList" id="toDoList"></ul>
-    <div class="weather" id="weather"></div>
+    <div class="conteiner_list">
+      <ul class="toDoList" id="toDoList"></ul>
+    </div>
     <script type="module">
       import { main } from "./main.js";
       main();

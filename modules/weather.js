@@ -13,46 +13,45 @@ function getWeather(lat, lng) {
     .then((json) => {
       const temperature = Math.floor(json.main.temp);
       const place = json.name;
-      wetherConteiner.innerText = `${temperature}°C ${place}`;
+      wetherConteiner.innerText = `🌤 +${temperature}°C ${place}`;
     });
-}
 
-function saveCoords(positionObj) {
-  localStorage.setItem(COORDS_LS, JSON.stringify(positionObj));
-}
-
-function geoSuccessHundle(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  const positionObj = {
-    latitude,
-    longitude,
-  };
-  saveCoords(positionObj);
-  getWeather(latitude, longitude);
-}
-
-function geoErroHundle() {
-  const loadedCoords = JSON.parse(coords);
-  console.log(loadedCoords);
-}
-
-function askForCoords() {
-  navigator.geolocation.getCurrentPosition(geoSuccessHundle, geoErroHundle);
-}
-
-function getCoords() {
-  const coords = localStorage.getItem(COORDS_LS);
-  if (coords === null) {
-    askForCoords();
-  } else {
-    const loadedCoords = JSON.parse(coords);
-    getWeather(loadedCoords.latitude, loadedCoords.longitude);
+  function saveCoords(positionObj) {
+    localStorage.setItem(COORDS_LS, JSON.stringify(positionObj));
   }
-}
 
-function initWeather() {
-  getCoords();
-}
+  function geoSuccessHundle(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const positionObj = {
+      latitude,
+      longitude,
+    };
+    saveCoords(positionObj);
+    getWeather(latitude, longitude);
+  }
 
-export { initWeather };
+  function geoErroHundle() {
+    const loadedCoords = JSON.parse(coords);
+    console.log(loadedCoords);
+  }
+
+  function askForCoords() {
+    navigator.geolocation.getCurrentPosition(geoSuccessHundle, geoErroHundle);
+  }
+
+  function getCoords() {
+    const coords = localStorage.getItem(COORDS_LS);
+    if (coords === null) {
+      askForCoords();
+    } else {
+      const loadedCoords = JSON.parse(coords);
+      getWeather(loadedCoords.latitude, loadedCoords.longitude);
+    }
+  }
+
+  function initWeather() {
+    getCoords();
+  }
+
+  export { initWeather };
