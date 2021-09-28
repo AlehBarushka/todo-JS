@@ -3,6 +3,7 @@ const toDoInput = toDoForm.querySelector('input');
 const toDoList = document.querySelector('#toDoList');
 
 const TODOS_LS = 'toDos';
+const TODOS_CN = 'done';
 let toDos = [];
 
 function loadToDos() {
@@ -19,6 +20,12 @@ function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
+function doneToDo(event) {
+  const btn = event.target;
+  const li = btn.parentNode;
+  li.classList.toggle(TODOS_CN);
+}
+
 function deletToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
@@ -32,12 +39,16 @@ function deletToDo(event) {
 
 function showToDos(text) {
   const li = document.createElement('li');
+  const doneBtn = document.createElement('button');
   const delBtn = document.createElement('button');
   const span = document.createElement('span');
   const newId = toDos.length + 1;
+  doneBtn.innerHTML = '✔';
   delBtn.innerHTML = '✖';
   delBtn.addEventListener('click', deletToDo);
+  doneBtn.addEventListener('click', doneToDo);
   span.innerText = text;
+  li.appendChild(doneBtn);
   li.appendChild(delBtn);
   li.appendChild(span);
   toDoList.appendChild(li);
